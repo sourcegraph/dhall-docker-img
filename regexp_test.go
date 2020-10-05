@@ -10,7 +10,7 @@ func TestReferenceRegexp(t *testing.T) {
 
 	var imgRefs []*ImageReference
 
-	err := processReader(sr, &imgRefs)
+	err := processReader(sr, &imgRefs, make(map[string]struct{}))
 	if err != nil {
 		t.Fatal(err)
 	}
