@@ -174,11 +174,6 @@ func main() {
 		os.Exit(0)
 	}
 
-	if len(flag.Args()) > 1 {
-		flag.Usage()
-		os.Exit(1)
-	}
-
 	var imgRefs []*ImageReference
 	seen := make(map[string]struct{})
 
