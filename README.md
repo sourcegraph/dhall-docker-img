@@ -5,9 +5,9 @@ Input can be a list of files, directories or stdin. Output is always stdout.
 ```
 export DHALL_DOCKER_IMAGES=`dhall-docker-img deploy-sourcegraph/base`
 
-dhall repl 
+dhall repl
 Welcome to the Dhall v1.35.0 REPL! Type :help for more information.
-⊢ :let r = env:DHALL_DOCKER_IMAGES 
+⊢ :let r = env:DHALL_DOCKER_IMAGES
 ⊢ r
 
 { cadvisor =
@@ -16,9 +16,9 @@ Welcome to the Dhall v1.35.0 REPL! Type :help for more information.
   , sha256 = "09076e6c5f7342de87445b295b904f28c044adb9c68b4303843fca5ddb05f832"
   , version = "insiders"
   }
-  
+
   ...
-  
+
 , frontend =
   { name = "sourcegraph/frontend"
   , registry = "index.docker.io"
