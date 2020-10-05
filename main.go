@@ -148,10 +148,10 @@ func processInputs(inputs []string, imgRefs *[]*ImageReference, seen map[string]
 const imageRecordTemplate = `let images =
 {
   {{range $index, $imgRef := .}} {{if gt $index 0}},{{end}} {{$imgRef.Key}} = {
-         registry = "{{$imgRef.Registry}}"
+         registry = Some "{{$imgRef.Registry}}"
          , name = "{{$imgRef.Name}}"
-         , version = "{{$imgRef.Version}}"
-         , sha256 = "{{$imgRef.Sha256}}"
+         , tag = Some "{{$imgRef.Version}}"
+         , sha256 = Some "{{$imgRef.Sha256}}"
       }
   {{end}}
 }
